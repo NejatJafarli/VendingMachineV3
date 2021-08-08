@@ -12,3 +12,6 @@ C:\Users\Asus Rog Strix G17\source\repos\VendingMachineV3\VendingMachineV3\obj\D
 C:\Users\Asus Rog Strix G17\source\repos\VendingMachineV3\VendingMachineV3\obj\Debug\VendingMachineV3.pdb
 C:\Users\Asus Rog Strix G17\source\repos\VendingMachineV3\VendingMachineV3\obj\Debug\VendingMachineV3.Controller.resources
 C:\Users\Asus Rog Strix G17\source\repos\VendingMachineV3\VendingMachineV3\obj\Debug\VendingMachineV3.csproj.AssemblyReference.cache
+C:\Users\Asus Rog Strix G17\source\repos\VendingMachineV3\VendingMachineV3\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Asus Rog Strix G17\source\repos\VendingMachineV3\VendingMachineV3\bin\Debug\itextsharp.dll
+C:\Users\Asus Rog Strix G17\source\repos\VendingMachineV3\VendingMachineV3\bin\Debug\itextsharp.xml
