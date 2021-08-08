@@ -1,9 +1,12 @@
 ﻿using Guna.UI2.WinForms;
+using iTextSharp.text.pdf;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +21,7 @@ namespace VendingMachineV3
         public Form1()
         {
             InitializeComponent();
-            productController1.MyProduct = new Product("Cola", 1, 100, Properties.Resources.Coca_Cola_Can_icon);
+            productController1.MyProduct = new Product("Cola", 1, 150, Properties.Resources.Coca_Cola_Can_icon);
             productController1.LoadProduct();
             ProductControllers.Add(productController1);
 
@@ -58,8 +61,17 @@ namespace VendingMachineV3
         {
             if (!string.IsNullOrWhiteSpace(txtPrice.Text))
             {
-                var temp = Convert.ToDouble(txtPrice.Text);
-                lblOutedPrice.Text = (temp - GlobalPrice).ToString();
+                var temp = double.Parse(txtPrice.Text);
+                var num1 = (int)GlobalPrice;
+                var num2 = (int)((GlobalPrice - num1)*10);
+                double numbertemp = (double)num2 / 10;
+                double Number1 = (double)num1 + numbertemp;
+
+                double num3 = temp - Number1;
+                var num4 = (int)num3;
+                var num5 = (int)((num3 - num4)*10);
+
+                lblOutedPrice.Text = $"{(double)((double)num4+((double)num5/10))}";
                 lblEnteredPrice.Text = txtPrice.Text;
             }
             else
@@ -67,29 +79,6 @@ namespace VendingMachineV3
                 lblOutedPrice.Text = "";
                 lblEnteredPrice.Text = "";
             }
-            ///////////////////////Burda biseyler var
-            for (int i = 0; i < ProductControllers.Count; i++)
-                if (ProductControllers[i].IsChecked)
-                {
-                    txtPrice.Enabled = true;
-                    guna2CircleButton1.Enabled = true;
-                    guna2CircleButton2.Enabled = true;
-                    guna2CircleButton3.Enabled = true;
-                    guna2CircleButton4.Enabled = true;
-                    guna2CircleButton5.Enabled = true;
-                    guna2CircleButton6.Enabled = true;
-                    break;
-                }
-                else
-                {
-                    txtPrice.Enabled = false;
-                    guna2CircleButton1.Enabled = false;
-                    guna2CircleButton2.Enabled = false;
-                    guna2CircleButton3.Enabled = false;
-                    guna2CircleButton4.Enabled = false;
-                    guna2CircleButton5.Enabled = false;
-                    guna2CircleButton6.Enabled = false;
-                }
         }
 
         bool LookTxt(in Guna2TextBox txt)
@@ -138,6 +127,7 @@ namespace VendingMachineV3
         private void guna2CircleButton2_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(txtPrice.Text))
+
                 txtPrice.Text = $"{Convert.ToDouble(txtPrice.Text) + 0.20}";
             else
                 txtPrice.Text = $"{0.2}";
@@ -186,34 +176,60 @@ namespace VendingMachineV3
                 txtPrice.Text = $"{0.10}";
 
         }
+
+        private void btnSavePDF_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(lblOutedPrice.Text))
+                if (lblOutedPrice.Text[0] != '-')
+                {
+                    PdfPTable table = new PdfPTable(3)
+                    {
+                        HorizontalAlignment = Left,
+                        WidthPercentage = 100,
+                    };
+
+                    PdfPCell cell = new PdfPCell(new iTextSharp.text.Phrase("Vending Machine Info"))
+                    {
+                        Colspan = 3,
+                        HorizontalAlignment = 1,
+                        MinimumHeight = 30f
+                    };
+                    PdfPCell cell2 = new PdfPCell(new iTextSharp.text.Phrase($"Total:{GlobalPrice}$\nDaxil Edilen Mebleg:{txtPrice.Text}$\nQaliq:{lblOutedPrice.Text}$"))
+                    {
+                        Colspan = 3,
+                        HorizontalAlignment = 2,
+                        MinimumHeight = 30f
+                    };
+                    table.AddCell(cell);
+                    table.AddCell("Product Name");
+                    table.AddCell("Product Quanity");
+                    table.AddCell("Product Price");
+                    for (int i = 0; i < ProductControllers.Count; i++)
+                    {
+                        if (ProductControllers[i].IsChecked && ProductControllers[i].ProductQuanity.Value > 0)
+                        {
+                            table.AddCell(ProductControllers[i].MyProduct.ProductName);
+                            table.AddCell(ProductControllers[i].ProductQuanity.Value.ToString());
+                            table.AddCell($"{ProductControllers[i].SummedPrice}$");
+                        }
+                    }
+                    table.AddCell(cell2);
+                    string path = $@"C:\Users\{Environment.UserName}\Documents\PDF File.pdf";
+                    iTextSharp.text.Document doc = new iTextSharp.text.Document();
+
+                    PdfWriter.GetInstance(doc, new FileStream(path, FileMode.OpenOrCreate));
+                    doc.Open();
+                    doc.Add(table);
+                    doc.Close();
+
+                    Process.Start(path);
+                }
+                else
+                {
+                    MessageBox.Show("Your Entered Money Not Enough");
+                }
+        }
     }
 }
-//PdfPTable table = new PdfPTable(3)
-//{
-//    HorizontalAlignment = Left,
-//    WidthPercentage = 100,
-//};
-
-//PdfPCell cell = new PdfPCell(new iTextSharp.text.Phrase("Vending Machine Info"))
-//{
-//    Colspan = 3,
-//    HorizontalAlignment = 1, //left=0, centre=1, right=2
-//    MinimumHeight = 30f
-//};
-//table.AddCell(cell);
-//table.AddCell("Product Name");
-//table.AddCell("Product Price");
-//table.AddCell("Product Quanity");
-
-//table.AddCell("Fanta");
-//table.AddCell("1.60");
-//table.AddCell("3");
-//string path = $@"C:\Users\{Environment.UserName}\Documents\PDF File.pdf";
-//iTextSharp.text.Document doc = new iTextSharp.text.Document();
-//PdfWriter.GetInstance(doc, new FileStream(path, FileMode.OpenOrCreate));
-//doc.Open();
-//doc.Add(table);
-//doc.Close();
 
 
-//Process.Start(path);

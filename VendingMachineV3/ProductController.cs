@@ -22,12 +22,15 @@ namespace VendingMachineV3
         void TxtChangePrice(ref Guna.UI2.WinForms.Guna2NumericUpDown Num, ref Guna.UI2.WinForms.Guna2TextBox Text2, double price)
         {
             var temp = (int)Num.Value;
+
             label1.Text = $"{MyProduct.ProductQuanity - temp}";
             if (temp == 0)
                 Text2.Text = $"{1 * price}";
             else
                 Text2.Text = $"{temp * price}";
             SummedPrice = temp * price;
+
+
             if (OldValue < temp)
                 Form1.GlobalPrice += (temp - OldValue) * price;
             else
@@ -76,6 +79,11 @@ namespace VendingMachineV3
                 ProductQuanity.Enabled = false;
                 IsChecked = false;
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
