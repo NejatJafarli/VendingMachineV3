@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -45,9 +46,145 @@ namespace VendingMachineV3
             productController7.LoadProduct();
             ProductControllers.Add(productController7);
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
+            Timer timer = new Timer();
+            timer.Interval = 100;
+            timer.Tick += Timer_Tick;
+            timer.Start();
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtPrice.Text))
+            {
+                var temp = Convert.ToDouble(txtPrice.Text);
+                lblOutedPrice.Text = (temp - GlobalPrice).ToString();
+                lblEnteredPrice.Text = txtPrice.Text;
+            }
+            else
+            {
+                lblOutedPrice.Text = "";
+                lblEnteredPrice.Text = "";
+            }
+            ///////////////////////Burda biseyler var
+            for (int i = 0; i < ProductControllers.Count; i++)
+                if (ProductControllers[i].IsChecked)
+                {
+                    txtPrice.Enabled = true;
+                    guna2CircleButton1.Enabled = true;
+                    guna2CircleButton2.Enabled = true;
+                    guna2CircleButton3.Enabled = true;
+                    guna2CircleButton4.Enabled = true;
+                    guna2CircleButton5.Enabled = true;
+                    guna2CircleButton6.Enabled = true;
+                    break;
+                }
+                else
+                {
+                    txtPrice.Enabled = false;
+                    guna2CircleButton1.Enabled = false;
+                    guna2CircleButton2.Enabled = false;
+                    guna2CircleButton3.Enabled = false;
+                    guna2CircleButton4.Enabled = false;
+                    guna2CircleButton5.Enabled = false;
+                    guna2CircleButton6.Enabled = false;
+                }
+        }
+
+        bool LookTxt(in Guna2TextBox txt)
+        {
+            if (!string.IsNullOrWhiteSpace(txt.Text))
+                if (txt.Text[0] == '.' || txt.Text[0] == ',')
+                {
+                    txt.Clear();
+                    return false;
+                }
+            return true;
+        }
+
+
+        void TxtTextChanged(ref Guna.UI2.WinForms.Guna2TextBox Text1)
+        {
+            try
+            {
+                if (!string.IsNullOrWhiteSpace(Text1.Text))
+                {
+                    var temp = Convert.ToDouble(Text1.Text);
+
+                }
+            }
+            catch
+            {
+                Text1.Text = Text1.Text.Substring(0, Text1.Text.Length - 1); ;
+                Text1.SelectionStart = Text1.Text.Length;
+            }
+        }
+        private void txtPrice_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPrice.Text))
+            {
+
+            }
+            if (LookTxt(txtPrice))
+            {
+                txtPrice.Text = txtPrice.Text.Replace('.', ',');
+                txtPrice.SelectionStart = txtPrice.Text.Length;
+                TxtTextChanged(ref txtPrice);
+            }
+        }
+
+
+        private void guna2CircleButton2_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtPrice.Text))
+                txtPrice.Text = $"{Convert.ToDouble(txtPrice.Text) + 0.20}";
+            else
+                txtPrice.Text = $"{0.2}";
+        }
+
+        private void guna2CircleButton3_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtPrice.Text))
+                txtPrice.Text = $"{Convert.ToDouble(txtPrice.Text) + 0.50}";
+            else
+                txtPrice.Text = $"{0.5}";
+
+        }
+
+        private void guna2CircleButton4_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtPrice.Text))
+                txtPrice.Text = $"{Convert.ToDouble(txtPrice.Text) + 1}";
+            else
+                txtPrice.Text = $"{1}";
+
+        }
+
+        private void guna2CircleButton5_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtPrice.Text))
+                txtPrice.Text = $"{Convert.ToDouble(txtPrice.Text) + 5}";
+            else
+                txtPrice.Text = $"{5}";
+
+        }
+
+        private void guna2CircleButton6_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtPrice.Text))
+                txtPrice.Text = $"{Convert.ToDouble(txtPrice.Text) + 10}";
+            else
+                txtPrice.Text = $"{10}";
+        }
+
+        private void guna2CircleButton1_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtPrice.Text))
+                txtPrice.Text = $"{Convert.ToDouble(txtPrice.Text) + 0.10}";
+            else
+                txtPrice.Text = $"{0.10}";
+
         }
     }
 }

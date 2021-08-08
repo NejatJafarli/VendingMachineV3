@@ -61,11 +61,12 @@ namespace VendingMachineV3
         {
             TxtChangePrice(ref ProductQuanity, ref txtPrice, MyProduct.ProductPrice);
         }
-
+        public bool IsChecked { get; set; } = false;
         private void Checkbox_CheckedChanged(object sender, EventArgs e)
         {
             if (Checkbox.Checked)
             {
+                IsChecked = true;
                 ProductQuanity.Value = ProductQuanity.Minimum + 1;
                 ProductQuanity.Enabled = true;
             }
@@ -73,6 +74,7 @@ namespace VendingMachineV3
             {
                 ProductQuanity.Value = ProductQuanity.Minimum;
                 ProductQuanity.Enabled = false;
+                IsChecked = false;
             }
         }
     }

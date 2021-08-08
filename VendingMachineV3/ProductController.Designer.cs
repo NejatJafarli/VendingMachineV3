@@ -34,8 +34,8 @@ namespace VendingMachineV3
             this.ProductQuanity = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.Checkbox = new Guna.UI2.WinForms.Guna2CheckBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductQuanity)).BeginInit();
@@ -128,17 +128,6 @@ namespace VendingMachineV3
             this.guna2Panel1.Size = new System.Drawing.Size(62, 33);
             this.guna2Panel1.TabIndex = 30;
             // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 33);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "0";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // txtPrice
             // 
             this.txtPrice.Animated = true;
@@ -170,6 +159,17 @@ namespace VendingMachineV3
             this.txtPrice.Size = new System.Drawing.Size(138, 33);
             this.txtPrice.TabIndex = 26;
             // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 33);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "0";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ProductController
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,8 +192,8 @@ namespace VendingMachineV3
         private Guna.UI2.WinForms.Guna2NumericUpDown ProductQuanity;
         private Guna.UI2.WinForms.Guna2TextBox txtPrice;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2CheckBox Checkbox;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
