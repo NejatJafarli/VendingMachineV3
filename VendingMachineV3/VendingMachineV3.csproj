@@ -131,5 +131,11 @@
   <ItemGroup>
     <None Include="Resources\vending_machine_48px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ulker-albeni-kaplbar-40-gr-24x6-0034500-biskuvi-cikolata-494-35-B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ulker-albeni-40-gr-x-24-adet-7033370015091083262.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

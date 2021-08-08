@@ -133,6 +133,26 @@ namespace VendingMachineV3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ulker_albeni_40_gr_x_24_adet_7033370015091083262 {
+            get {
+                object obj = ResourceManager.GetObject("ulker-albeni-40-gr-x-24-adet-7033370015091083262", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ulker_albeni_kaplbar_40_gr_24x6_0034500_biskuvi_cikolata_494_35_B {
+            get {
+                object obj = ResourceManager.GetObject("ulker-albeni-kaplbar-40-gr-24x6-0034500-biskuvi-cikolata-494-35-B", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap uploads_fanta_fanta_PNG17 {
             get {
                 object obj = ResourceManager.GetObject("uploads_fanta_fanta_PNG17", resourceCulture);

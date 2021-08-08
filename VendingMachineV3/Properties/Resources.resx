@@ -136,13 +136,19 @@
   <data name="uploads_fanta_fanta_PNG17" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\uploads_fanta_fanta_PNG17.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ulker-albeni-kaplbar-40-gr-24x6-0034500-biskuvi-cikolata-494-35-B" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ulker-albeni-kaplbar-40-gr-24x6-0034500-biskuvi-cikolata-494-35-B.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="167-1678649_mars-twix-chocolate-bar-5-pcs" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\167-1678649_mars-twix-chocolate-bar-5-pcs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vending_machine_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vending_machine_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Coca-Cola-Can-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Coca-Cola-Can-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="vending_machine_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\vending_machine_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ulker-albeni-40-gr-x-24-adet-7033370015091083262" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ulker-albeni-40-gr-x-24-adet-7033370015091083262.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

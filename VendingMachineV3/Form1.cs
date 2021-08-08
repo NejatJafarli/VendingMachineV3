@@ -25,7 +25,7 @@ namespace VendingMachineV3
             productController2.LoadProduct();
             ProductControllers.Add(productController2);
 
-            productController3.MyProduct = new Product("Albeni", 0.70, 100, Properties.Resources.albeni);
+            productController3.MyProduct = new Product("Albeni", 0.70, 100, Properties.Resources.ulker_albeni_40_gr_x_24_adet_7033370015091083262);
             productController3.LoadProduct();
             ProductControllers.Add(productController3);
 
