@@ -48,6 +48,14 @@ namespace VendingMachineV3
             productController7.MyProduct = new Product("Snickers", 1, 100, Properties.Resources.snickers_PNG98761);
             productController7.LoadProduct();
             ProductControllers.Add(productController7);
+
+            productController8.MyProduct = new Product("Orbit Saqqiz", 1.3, 100, Properties.Resources.realorbit);
+            productController8.LoadProduct();
+            ProductControllers.Add(productController8);
+
+            productController9.MyProduct = new Product("biskolata", 0.50, 100, Properties.Resources.Biskolata);
+            productController9.LoadProduct();
+            ProductControllers.Add(productController9);
         }
         private void Form1_Load(object sender, EventArgs e)
         {

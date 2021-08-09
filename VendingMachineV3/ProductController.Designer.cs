@@ -29,17 +29,18 @@ namespace VendingMachineV3
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductController));
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.ProductQuanity = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.Checkbox = new Guna.UI2.WinForms.Guna2CheckBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2ShadowPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductQuanity)).BeginInit();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2ShadowPanel1
@@ -56,16 +57,6 @@ namespace VendingMachineV3
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
             this.guna2ShadowPanel1.Size = new System.Drawing.Size(174, 202);
             this.guna2ShadowPanel1.TabIndex = 31;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Location = new System.Drawing.Point(22, 23);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(73, 69);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 33;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // ProductQuanity
             // 
@@ -106,7 +97,7 @@ namespace VendingMachineV3
             this.Checkbox.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(82)))), ((int)(((byte)(215)))));
             this.Checkbox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Checkbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Checkbox.Location = new System.Drawing.Point(22, 143);
+            this.Checkbox.Location = new System.Drawing.Point(9, 143);
             this.Checkbox.Name = "Checkbox";
             this.Checkbox.Size = new System.Drawing.Size(82, 39);
             this.Checkbox.TabIndex = 32;
@@ -140,6 +131,16 @@ namespace VendingMachineV3
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Location = new System.Drawing.Point(22, 23);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(73, 69);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 33;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // txtPrice
             // 
             this.txtPrice.Animated = true;
@@ -159,7 +160,7 @@ namespace VendingMachineV3
             this.txtPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
             this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrice.HoverState.Parent = this.txtPrice;
-            this.txtPrice.IconRight = global::VendingMachineV3.Properties.Resources.icons8_cash_app_48;
+            this.txtPrice.IconRight = ((System.Drawing.Image)(resources.GetObject("txtPrice.IconRight")));
             this.txtPrice.IconRightSize = new System.Drawing.Size(30, 30);
             this.txtPrice.Location = new System.Drawing.Point(22, 100);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(5);
@@ -180,9 +181,9 @@ namespace VendingMachineV3
             this.Size = new System.Drawing.Size(175, 202);
             this.Load += new System.EventHandler(this.ProductController_Load);
             this.guna2ShadowPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductQuanity)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

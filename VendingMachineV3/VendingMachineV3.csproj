@@ -144,5 +144,11 @@
   <ItemGroup>
     <None Include="Resources\ulker-albeni-40-gr-x-24-adet-7033370015091083262.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\realorbit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Biskolata.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

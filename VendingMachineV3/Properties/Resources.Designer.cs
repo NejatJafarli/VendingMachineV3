@@ -93,6 +93,16 @@ namespace VendingMachineV3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Biskolata {
+            get {
+                object obj = ResourceManager.GetObject("Biskolata", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Coca_Cola_Can_icon {
             get {
                 object obj = ResourceManager.GetObject("Coca-Cola-Can-icon", resourceCulture);
@@ -116,6 +126,16 @@ namespace VendingMachineV3.Properties {
         internal static System.Drawing.Bitmap lipton {
             get {
                 object obj = ResourceManager.GetObject("lipton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap realorbit {
+            get {
+                object obj = ResourceManager.GetObject("realorbit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
