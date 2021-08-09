@@ -425,7 +425,7 @@ namespace VendingMachineV3
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1150, 702);
+            this.ClientSize = new System.Drawing.Size(936, 702);
             this.Controls.Add(this.lblOutedPrice);
             this.Controls.Add(this.lblEnteredPrice);
             this.Controls.Add(this.label2);
@@ -448,6 +448,8 @@ namespace VendingMachineV3
             this.Controls.Add(this.productController3);
             this.Controls.Add(this.productController2);
             this.Controls.Add(this.productController1);
+            this.MaximumSize = new System.Drawing.Size(952, 741);
+            this.MinimumSize = new System.Drawing.Size(952, 741);
             this.Name = "Form1";
             this.Text = " ";
             this.Load += new System.EventHandler(this.Form1_Load);

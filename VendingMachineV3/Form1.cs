@@ -194,7 +194,7 @@ namespace VendingMachineV3
                         HorizontalAlignment = 1,
                         MinimumHeight = 30f
                     };
-                    PdfPCell cell2 = new PdfPCell(new iTextSharp.text.Phrase($"Total:{GlobalPrice}$\nDaxil Edilen Mebleg:{txtPrice.Text}$\nQaliq:{lblOutedPrice.Text}$"))
+                    PdfPCell cell2 = new PdfPCell(new iTextSharp.text.Phrase($"\nTotal:{GlobalPrice}$\n\nDaxil Edilen Mebleg:{txtPrice.Text}$\n\nQaliq:{lblOutedPrice.Text}$"))
                     {
                         Colspan = 3,
                         HorizontalAlignment = 2,
